@@ -1,0 +1,72 @@
+# Portfolio .gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories (if you add npm later)
+node_modules/
+jspm_packages/
+
+# Optional: Personal files you don't want to commit
+# Uncomment these if you want to keep some files private
+# assets/personal-cv.pdf
+# images/personal-photos/
+
+# Build files (if you add a build process later)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Environment variables (if you add any)
+.env
+.env.local
+.env.*.local
+
+# Old/backup files
+*.bak
+*.old
+*_backup.*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Optional: If you want to track Logo.png and website 3.png removal
+# (These were from the original template)
+Logo.png
+website*.png

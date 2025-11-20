@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(0.45, 0.05, 0.25, 0.95);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-medium);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.01em;
+  }
+
+  a {
+    color: var(--color-medium);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--color-walnut);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--color-medium);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}

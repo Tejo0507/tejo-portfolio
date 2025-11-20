@@ -1,0 +1,384 @@
+/* ============================================
+   ULTIMATE PORTFOLIO ADVANCED FEATURES
+   100% Free, Zero Cost Styling
+   ============================================ */
+
+/* Voice Command Button */
+.voice-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--main-color), #ff6666);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(204, 59, 43, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2.5s infinite;
+    opacity: 0.9;
+}
+
+.voice-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 30px rgba(204, 59, 43, 0.5);
+    opacity: 1;
+}
+
+.voice-btn.active {
+    background: linear-gradient(135deg, #00ff00, #00cc00);
+    animation: listening 1s infinite;
+}
+
+.voice-btn i {
+    font-size: 2rem;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 5px 25px rgba(204, 59, 43, 0.4);
+    }
+    50% {
+        box-shadow: 0 5px 35px rgba(204, 59, 43, 0.7), 0 0 0 10px rgba(204, 59, 43, 0.1);
+    }
+}
+
+@keyframes listening {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* AI Chat Bot */
+.ai-chat-btn {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.3);
+    transition: all 0.3s ease;
+    animation: float 3.5s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+.ai-chat-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(155, 89, 182, 0.5);
+    opacity: 1;
+}
+
+.ai-chat-btn i {
+    font-size: 2rem;
+    color: white;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* AI Chat Box */
+.ai-chat-box {
+    position: fixed;
+    bottom: 10rem;
+    right: 2rem;
+    width: 350px;
+    height: 500px;
+    background: rgba(30, 30, 40, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(155, 89, 182, 0.5);
+}
+
+.ai-chat-box.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.chat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.chat-header i {
+    font-size: 1.5rem;
+}
+
+.close-chat {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-chat:hover {
+    transform: rotate(90deg);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(155, 89, 182, 0.5);
+    border-radius: 10px;
+}
+
+.ai-message, .user-message {
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: messageSlideIn 0.3s ease;
+}
+
+.ai-message {
+    background: rgba(155, 89, 182, 0.2);
+    border: 1px solid rgba(155, 89, 182, 0.3);
+    align-self: flex-start;
+    color: #e0e0e0;
+}
+
+.user-message {
+    background: rgba(204, 59, 43, 0.2);
+    border: 1px solid rgba(204, 59, 43, 0.3);
+    align-self: flex-end;
+    color: #e0e0e0;
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-input-container {
+    padding: 1rem;
+    background: rgba(20, 20, 30, 0.9);
+    display: flex;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(155, 89, 182, 0.3);
+}
+
+#chatInput {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(155, 89, 182, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+#chatInput::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#chatSend {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#chatSend:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.4);
+}
+
+#chatSend i {
+    font-size: 1.3rem;
+}
+
+/* Custom Cursor - DISABLED */
+/* Removed to fix cursor visibility issues and improve performance */
+
+.click-ripple {
+    display: none; /* Disabled along with custom cursor */
+}
+
+/* Matrix Mode */
+.matrix-mode {
+    overflow: hidden;
+}
+
+.matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    pointer-events: none;
+}
+
+/* Notification System */
+.custom-notification {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, rgba(204, 59, 43, 0.95), rgba(220, 70, 55, 0.95));
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    border-left: 4px solid white;
+}
+
+.custom-notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Performance Monitor */
+.performance-monitor {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    color: #0f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    z-index: 1001;
+    border: 1px solid #0f0;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.monitor-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #0f0;
+    padding-bottom: 0.3rem;
+}
+
+#monitorStats div {
+    margin: 0.3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-chat-box {
+        width: 90%;
+        right: 5%;
+        bottom: 8rem;
+        height: 450px;
+    }
+    
+    .voice-btn, .ai-chat-btn {
+        width: 50px;
+        height: 50px;
+        right: 1rem;
+    }
+    
+    .voice-btn {
+        bottom: 1rem;
+    }
+    
+    .ai-chat-btn {
+        bottom: 4.5rem;
+    }
+    
+    .custom-notification {
+        right: 1rem;
+        left: 1rem;
+        top: 1rem;
+    }
+}
+
+/* Hide default cursor only when custom cursor is explicitly active (improves accessibility) */
+/* On touch devices, keep native cursor behavior */
+@media (hover: hover) and (pointer: fine) {
+    body.custom-cursor-active {
+        cursor: none;
+    }
+
+    /* Ensure interactive elements remain pointer when custom cursor active */
+    body.custom-cursor-active a,
+    body.custom-cursor-active button,
+    body.custom-cursor-active .btn,
+    body.custom-cursor-active .project-btn,
+    body.custom-cursor-active .nextprev-btn {
+        cursor: pointer !important;
+    }
+}
+
+/* Enhanced hover effects for interactive elements */
+a:hover, button:hover, .btn:hover {
+    transform: scale(1.05);
+}
+
+/* REMOVED loading animation glow pulse that was causing lag */
+
+/* REMOVED wrapper hover glow that was causing lag */
