@@ -5,8 +5,10 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				WalnutDark: "#2E1F1B",
-				WalnutLight: "#5E4B43",
+				WalnutDark: "#8b6f47",
+				WalnutLight: "#d4b896",
+				dark: "#faf8f6",
+				medium: "#1a1410",
 			},
 		},
 	},
