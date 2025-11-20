@@ -1,0 +1,10 @@
+:root {
+  --color-dark: #2e1f1b;
+  --color-medium: #5e4b43;
+  --color-walnut: #5e4b43;
+  --color-background: #2e1f1b;
+
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-depth: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-inner-warm: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
