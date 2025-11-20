@@ -49,24 +49,23 @@ export default function SkillsPage() {
 
           <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
             <aside aria-label="Skill categories" className="space-y-3">
-              <motion.nav
-                role="list"
-                className="space-y-3"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, ease: [0.45, 0.05, 0.25, 0.95] }}
-              >
+              <nav className="space-y-3">
                 {categoryCounts.map(({ category, count }) => (
-                  <div role="listitem" key={category.id}>
+                  <motion.div
+                    key={category.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: [0.45, 0.05, 0.25, 0.95] }}
+                  >
                     <SkillCategoryCard
                       category={category}
                       count={count}
                       isActive={categoryFilter === category.id}
                       onSelect={setCategoryFilter}
                     />
-                  </div>
+                  </motion.div>
                 ))}
-              </motion.nav>
+              </nav>
             </aside>
 
             <section aria-label="Skills list" className="space-y-4">
