@@ -1,10 +1,10 @@
-# 🚀 Deployment Commands Cheatsheet
+# Deployment Commands Cheatsheet
 
 Quick reference for deploying your portfolio to different platforms.
 
 ---
 
-## 📦 GitHub Pages Deployment
+## GitHub Pages Deployment
 
 ### Step 1: Initialize Git (if not already done)
 ```bash
@@ -38,7 +38,7 @@ git push -u origin main
 
 ---
 
-## 🌐 Netlify Deployment
+## Netlify Deployment
 
 ### Method 1: Drag & Drop (Easiest)
 1. Go to: https://app.netlify.com/drop
@@ -107,7 +107,7 @@ vercel --prod
 
 ---
 
-## 🌍 Custom Domain Setup
+## Custom Domain Setup
 
 ### For GitHub Pages:
 1. Buy a domain (Namecheap, GoDaddy, etc.)
@@ -140,7 +140,7 @@ vercel --prod
 
 ---
 
-## 🔄 Update Your Deployed Site
+## Update Your Deployed Site
 
 ### GitHub Pages:
 ```bash
@@ -176,7 +176,7 @@ git push origin main
 
 ---
 
-## 🧪 Local Testing Commands
+## Local Testing Commands
 
 ### Simple HTTP Server (Python):
 ```bash
@@ -218,7 +218,7 @@ php -S localhost:8000
 
 ---
 
-## 📊 Check Deployment Status
+## Check Deployment Status
 
 ### GitHub Pages:
 ```bash
@@ -249,7 +249,7 @@ vercel open
 
 ---
 
-## 🔍 Troubleshooting Deployments
+## Troubleshooting Deployments
 
 ### Site not updating?
 ```bash
@@ -284,7 +284,7 @@ git push
 
 ---
 
-## 🎯 Quick Deploy Script
+## Quick Deploy Script
 
 Save this as `deploy.bat` (Windows) or `deploy.sh` (Mac/Linux):
 
@@ -339,7 +339,7 @@ Notes:
 
 ---
 
-## 📈 Analytics Setup
+## Analytics Setup
 
 ### Google Analytics:
 1. Go to: https://analytics.google.com/
@@ -363,7 +363,7 @@ Notes:
 
 ---
 
-## 🔒 Environment Variables (if needed later)
+## Environment Variables (if needed later)
 
 ### Netlify:
 ```bash
@@ -381,7 +381,7 @@ vercel env add KEY
 
 ---
 
-## ✅ Post-Deployment Checklist
+## Post-Deployment Checklist
 
 After deploying:
 - [ ] Visit your live site
@@ -398,15 +398,15 @@ After deploying:
 
 ---
 
-## 🎉 Your Site is Live!
+## Your Site is Live!
 
 Remember your URLs:
 - **GitHub Pages**: https://tejo0507.github.io/portfolio/
 - **Netlify**: https://[your-site-name].netlify.app
 - **Vercel**: https://[your-project].vercel.app
 
-**Share it everywhere!** 🌍
+**Share it everywhere!**
 
 ---
 
-*Need more help? Check README.md for detailed instructions!*
+*Check README.md for detailed instructions!*
