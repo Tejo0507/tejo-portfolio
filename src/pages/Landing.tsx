@@ -53,12 +53,14 @@ export default function Landing() {
           >
             Contact
           </Link>
-          <Link
-            to="/ai-lab"
-            className="w-full rounded-2xl border border-medium/20 bg-dark/30 px-8 py-3 text-center text-base font-semibold text-medium/90 transition-colors duration-smooth ease-smooth hover:bg-dark/60 sm:w-auto"
+          <a
+            href="https://drive.google.com/drive/folders/1xocmVEM7EEHEkorWQSsCVGztGYg0Qsvr?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-2xl border border-medium/40 bg-transparent px-8 py-3 text-center text-base font-semibold text-medium transition-colors duration-smooth ease-smooth hover:bg-dark/60 sm:w-auto"
           >
-            Visit AI Lab
-          </Link>
+            Resume
+          </a>
         </motion.div>
       </div>
 

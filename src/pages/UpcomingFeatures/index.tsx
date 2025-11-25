@@ -16,6 +16,12 @@ const upcomingFeatures = [
     status: "Under Development",
   },
   {
+    id: "ailab",
+    title: "AI Lab",
+    description: "Interactive AI/ML experimentation platform with live demos, model testing, and cutting-edge AI tools.",
+    status: "Under Development",
+  },
+  {
     id: "about",
     title: "About",
     description: "Detailed information about background, journey, and professional story.",
