@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useProjectStore } from "@/store/projectStore"
-import type { ProjectDifficulty } from "@/data/projects"
 
 interface ProjectFiltersProps {
   availableTech: string[]
@@ -9,7 +8,6 @@ interface ProjectFiltersProps {
   maxYear: number
 }
 
-const difficulties: ProjectDifficulty[] = ["Beginner", "Intermediate", "Advanced"]
 const DEBOUNCE_MS = 220
 
 export default function ProjectFilters({ availableTech, minYear, maxYear }: ProjectFiltersProps) {
@@ -28,12 +26,6 @@ export default function ProjectFilters({ availableTech, minYear, maxYear }: Proj
     setFilters({ tech: next })
   }
 
-  const toggleDifficulty = (level: ProjectDifficulty) => {
-    const exists = filters.difficulty.includes(level)
-    const next = exists ? filters.difficulty.filter((item) => item !== level) : [...filters.difficulty, level]
-    setFilters({ difficulty: next })
-  }
-
   const updateYear = (index: 0 | 1, value: number) => {
     const next: [number, number] = [...filters.yearRange] as [number, number]
     next[index] = value
@@ -46,7 +38,6 @@ export default function ProjectFilters({ availableTech, minYear, maxYear }: Proj
   const clearFilters = () => {
     setFilters({
       tech: [],
-      difficulty: difficulties,
       yearRange: [minYear, maxYear],
       search: "",
     })
@@ -97,26 +88,6 @@ export default function ProjectFilters({ availableTech, minYear, maxYear }: Proj
               >
                 {tech}
               </button>
-            )
-          })}
-        </div>
-      </div>
-
-      <div>
-        <p className="text-xs uppercase tracking-[0.3em] text-medium/70">Difficulty</p>
-        <div className="mt-2 flex flex-col gap-2">
-          {difficulties.map((level) => {
-            const active = filters.difficulty.includes(level)
-            return (
-              <label key={level} className="flex items-center gap-3 text-sm text-medium/80">
-                <input
-                  type="checkbox"
-                  checked={active}
-                  onChange={() => toggleDifficulty(level)}
-                  className="accent-medium"
-                />
-                {level}
-              </label>
             )
           })}
         </div>

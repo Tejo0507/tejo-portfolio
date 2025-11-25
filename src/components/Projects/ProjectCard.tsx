@@ -43,9 +43,6 @@ export default function ProjectCard({ project, viewMode = "grid" }: ProjectCardP
           <span className="rounded-full border border-medium/25 px-3 py-1 text-xs uppercase tracking-[0.3em] text-medium/70">
             {project.year}
           </span>
-          <span className="rounded-full border border-medium/25 px-3 py-1 text-xs text-medium/80">
-            {project.difficulty}
-          </span>
         </div>
         <h3 className="text-2xl font-semibold text-medium">{project.title}</h3>
         <p className="text-sm text-medium/80">{project.summary}</p>

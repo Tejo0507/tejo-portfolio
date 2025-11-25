@@ -5,12 +5,6 @@ import { Link } from "react-router-dom"
 import { Github, ExternalLink, Calendar } from "lucide-react"
 import { useState } from "react"
 
-const difficultyColors = {
-  Beginner: "text-green-400",
-  Intermediate: "text-yellow-400",
-  Advanced: "text-red-400",
-}
-
 export default function ProjectList() {
   const [filter, setFilter] = useState<string>("all")
   
@@ -87,10 +81,6 @@ export default function ProjectList() {
                       <div className="flex items-center gap-2 text-xs text-medium/60">
                         <Calendar className="h-3 w-3" />
                         <span>{project.year}</span>
-                        <span className="mx-1">•</span>
-                        <span className={difficultyColors[project.difficulty]}>
-                          {project.difficulty}
-                        </span>
                       </div>
                     </div>
                   </div>

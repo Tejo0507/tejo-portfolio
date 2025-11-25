@@ -53,7 +53,6 @@ export default function CompareProjects() {
               </div>
               <p className="mt-1 text-sm text-medium/80">{project.summary}</p>
               <p className="mt-2 text-xs uppercase tracking-[0.3em] text-medium/60">{project.year}</p>
-              <p className="text-xs text-medium/70">{project.difficulty}</p>
               <div className="mt-3 space-y-1 text-sm text-medium/80">
                 <p className="font-semibold">Tech</p>
                 <ul className="list-disc pl-5">

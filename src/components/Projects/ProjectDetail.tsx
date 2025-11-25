@@ -42,7 +42,6 @@ export default function ProjectDetail() {
           <p className="text-base text-medium/80">{project.details.description}</p>
           <div className="flex flex-wrap gap-3 text-sm text-medium/70">
             <span className="rounded-full border border-medium/25 px-3 py-1">{project.year}</span>
-            <span className="rounded-full border border-medium/25 px-3 py-1">{project.difficulty}</span>
             {project.liveUrl && (
               <a
                 href={project.liveUrl}

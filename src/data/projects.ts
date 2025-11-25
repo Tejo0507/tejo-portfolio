@@ -1,5 +1,3 @@
-export type ProjectDifficulty = "Beginner" | "Intermediate" | "Advanced"
-
 export interface FolderNode {
   name: string
   type: "file" | "folder"
@@ -19,7 +17,6 @@ export interface ProjectRecord {
   details: ProjectDetails
   tech: string[]
   year: number
-  difficulty: ProjectDifficulty
   repoUrl?: string
   liveUrl?: string
   images: string[]
@@ -38,7 +35,6 @@ export const projects: ProjectRecord[] = [
     },
     tech: ["Python", "Machine Learning", "NLP", "AI"],
     year: 2025,
-    difficulty: "Advanced",
     repoUrl: "https://github.com/Tejo0507/Hallucina.labs",
     liveUrl: "https://www.hallucina.in",
     images: ["/assets/projects/hallucina-labs.png"],
@@ -52,9 +48,8 @@ export const projects: ProjectRecord[] = [
       architecture: "Full-stack application with responsive frontend and robust backend API.",
       highlights: ["Live tracking", "Fare estimation", "Driver management"],
     },
-    tech: ["Python", "Flask", "PostgreSQL", "Google Maps API"],
+    tech: ["Python", "PostgreSQL", "Google Maps API"],
     year: 2025,
-    difficulty: "Intermediate",
     repoUrl: "https://github.com/Tejo0507/CabEase",
     liveUrl: "",
     images: ["/assets/projects/cabease.png"],
@@ -70,7 +65,6 @@ export const projects: ProjectRecord[] = [
     },
     tech: ["Python", "NumPy", "Deep Learning", "Neural Networks"],
     year: 2025,
-    difficulty: "Advanced",
     repoUrl: "https://github.com/Tejo0507/NeuroNet",
     liveUrl: "",
     images: ["/assets/projects/neuronet.png"],
@@ -86,7 +80,6 @@ export const projects: ProjectRecord[] = [
     },
     tech: ["Python", "YOLOv8", "OpenCV", "PyTorch", "Computer Vision"],
     year: 2025,
-    difficulty: "Advanced",
     repoUrl: "https://github.com/Tejo0507/object-detection-yolov8-coco",
     liveUrl: "",
     images: ["/assets/projects/yolov8-detection.png"],
@@ -102,7 +95,6 @@ export const projects: ProjectRecord[] = [
     },
     tech: ["Python", "Speech Recognition", "Translation API", "Audio Processing"],
     year: 2025,
-    difficulty: "Intermediate",
     repoUrl: "https://github.com/Tejo0507/speech_translate_pro",
     liveUrl: "",
     images: ["/assets/projects/speech-translate.png"],
@@ -116,9 +108,8 @@ export const projects: ProjectRecord[] = [
       architecture: "Web application with database integration for persistent storage and analytics.",
       highlights: ["Expense tracking", "Study scheduling", "Analytics dashboard"],
     },
-    tech: ["Flask", "Python", "SQLite", "Bootstrap"],
+    tech: ["Python", "SQLite"],
     year: 2025,
-    difficulty: "Intermediate",
     repoUrl: "https://github.com/Tejo0507/expense_study_helper",
     liveUrl: "",
     images: ["/assets/projects/expense-study.png"],

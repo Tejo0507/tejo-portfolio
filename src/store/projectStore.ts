@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { persist, createJSONStorage, type StateStorage } from "zustand/middleware"
-import type { ProjectRecord, ProjectDifficulty } from "@/data/projects"
+import type { ProjectRecord } from "@/data/projects"
 import { projects as seedProjects } from "@/data/projects"
 import type { AdminProject } from "@/data/sampleProjects"
 import { sampleProjects } from "@/data/sampleProjects"
@@ -10,7 +10,6 @@ import { generateId, timestampNow } from "@/utils/generateId"
 
 export interface ProjectFilters {
   tech: string[]
-  difficulty: ProjectDifficulty[]
   yearRange: [number, number]
   search: string
 }
@@ -32,7 +31,6 @@ interface ProjectStoreState {
 const years = seedProjects.map((project) => project.year)
 const initialFilters: ProjectFilters = {
   tech: [],
-  difficulty: ["Beginner", "Intermediate", "Advanced"],
   yearRange: [Math.min(...years), Math.max(...years)],
   search: "",
 }

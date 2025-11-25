@@ -4,12 +4,6 @@ import { motion } from "framer-motion"
 import { Link, useParams, Navigate } from "react-router-dom"
 import { Github, ExternalLink, ArrowLeft, Calendar, Sparkles } from "lucide-react"
 
-const difficultyColors = {
-  Beginner: "bg-green-400/20 text-green-400",
-  Intermediate: "bg-yellow-400/20 text-yellow-400",
-  Advanced: "bg-red-400/20 text-red-400",
-}
-
 export default function ProjectDetail() {
   const { id } = useParams()
   const project = projects.find((p) => p.id === id)
@@ -49,9 +43,6 @@ export default function ProjectDetail() {
                 <h1 className="text-4xl font-semibold leading-tight text-medium">
                   {project.title}
                 </h1>
-                <span className={`rounded-full px-3 py-1 text-xs font-medium ${difficultyColors[project.difficulty]}`}>
-                  {project.difficulty}
-                </span>
               </div>
               
               <div className="flex items-center gap-2 text-sm text-medium/60">
